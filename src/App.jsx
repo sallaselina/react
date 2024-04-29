@@ -1,46 +1,32 @@
-import './App.css';
 import { useState } from 'react';
-import Header from './Header.jsx';
-import Footer from './Footer.jsx';
-import Form from './Form.jsx';
-import View from './View.jsx';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Home from './routes/Home.jsx';
+import About from './routes/About.jsx';
+import ErrorPage from './routes/ErrorPage.jsx';
+import Persons from './routes/Persons.jsx';
+import Root from './routes/Root.jsx';
 
 function App() {
-  /*   const [counter, setCounter] = useState(1000);
   const [persons, setPersons] = useState([
-    { id: 1, name: 'Margit', title: 'CTO', location: 'Helsinki' },
-    { id: 2, name: 'Karin', title: 'designer', location: 'Tartu' },
-    { id: 3, name: 'Kati', title: 'developer', location: 'Far away' },
-  ]); */
-  /*   const [inputValue, setInputValue] = useState(''); */
-  const [formData, setFormData] = useState({});
+    { id: 1, name: 'Margit', title: 'CEO', age: 29, location: 'Helsinki' },
+    { id: 2, name: 'Kati', title: 'developer', age: 25, location: 'NY' },
+    { id: 3, name: 'Karin', title: 'designer', age: 45, location: 'Tartu' },
+  ]);
 
-  /*   const changeHandler = (event) => {
-    setInputValue(event.target.value);
-  }; */
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <Root />,
+      errorElement: <ErrorPage />,
+      children: [
+        { path: '/', element: <Home /> },
+        { path: '/about', element: <About /> },
+        { path: '/persons', element: <Persons persons={persons} /> },
+      ],
+    },
+  ]);
 
-  const changeFormHandler = (event) => {
-    const { name, value } = event.target;
-
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
-    console.log(formData);
-  };
-
-  /*  const clickIncHandler = () => {
-    setCounter(counter + 1);
-  };
-  const clickDecHandler = () => {
-    setCounter(counter - 1);
-  }; 
- */
-  return (
-    <>
-      <Header />
-      <Form changeHandler={changeFormHandler} />
-      <View {...formData} />
-      <Footer />
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
