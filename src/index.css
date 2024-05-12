@@ -14,16 +14,13 @@
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+  padding: 1rem;
 }
 
 body {
-  margin: 0;
-  min-width: 320px;
+  margin: 0 auto;
   min-height: 100vh;
   background-color: var(--bg);
   font-family: var(--font);
@@ -39,31 +36,57 @@ header {
 }
 
 footer {
-  position: fixed;
-  bottom: 0;
   background-color: #733b36;
   width: 100%;
   padding: 0.5rem;
-  margin: 0 auto;
+  margin: auto;
+  position: relative;
+  bottom: 0;
 }
 
 .container {
+  padding: 2rem;
   display: grid;
-  gap: 0.5rem;
-  grid-template-columns: auto auto auto auto;
+  gap: 1rem;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.split {
+  display: inline;
+  position: relative;
+  margin: 1rem;
+  width: 50%;
+  height: 80%;
+  background-position: center;
+}
+
+.split h2 {
+  position: absolute;
+  bottom: 150px;
+  left: 185px;
+  transform: translate(-50%, -50%);
+}
+
+.split a:hover {
+  color: #f2cbbd;
 }
 
 .card {
   background-color: #a65b4b;
-  border-radius: 20px;
+  border-radius: 10px;
+  min-width: 25%;
+}
+
+.card h2 {
+  text-transform: capitalize;
 }
 
 .card img {
-  height: 200px;
-  width: 300px;
-  padding: 0.5rem;
-  margin: 0.5rem;
+  max-height: 175px;
+  max-width: 175px;
   border-radius: 10px;
+  justify-content: center;
+  align-items: center;
 }
 
 .close {
@@ -77,7 +100,9 @@ footer {
 .minus {
   float: right;
 }
-
+.navigation a:hover {
+  color: #f2cbbd;
+}
 button {
   border-radius: 8px;
   border: 1px solid transparent;
@@ -88,23 +113,19 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
+  margin: 1rem;
 }
 button:hover {
-  border-color: #646cff;
+  border-color: #f2cbbd;
 }
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+a:hover {
+  color: #733b36;
+}
+button {
+  background-color: #f9f9f9;
 }

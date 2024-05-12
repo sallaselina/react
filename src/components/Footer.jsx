@@ -1,5 +1,9 @@
 const Footer = () => {
-  return <footer>Copyright &copy; React24K</footer>;
+  return (
+    <footer>
+      <small>Copyright &copy; React24K</small>
+    </footer>
+  );
 };
 
 export default Footer;

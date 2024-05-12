@@ -1,14 +1,25 @@
-import animal_image from "/src/assets/animal_image.jpg";
-
-const Card = ({ name, likes }) => {
+import { Link } from "react-router-dom";
+const Card = ({ name, likes, addLike, removeCard, removeLike }) => {
   return (
     <div className="card">
-      <span className="material-symbols-outlined close">close</span>
-      <img src={animal_image} alt="image of the animal"></img>
+      <button onClick={removeCard}>
+        <span className="material-symbols-outlined close">close</span>
+      </button>
+      <img
+        src={`https://source.unsplash.com/400x400/?${name}`}
+        alt="image of the animal"
+      />
       <h2>{name}</h2>
-      <span className="material-symbols-outlined heart">favorite</span>
-      <h3>{likes}</h3>
-      <span className="material-symbols-outlined minus">heart_minus</span>
+      <h3>{likes} likes </h3>
+      <button onClick={addLike}>
+        <span className="material-symbols-outlined heart">
+          {likes >= 0 ? "heart_plus" : "heart_broken"}
+        </span>
+      </button>
+      <button onClick={removeLike}>
+        <span className="material-symbols-outlined minus">heart_minus</span>
+      </button>
+      <Link to={name}> See more</Link>
     </div>
   );
 };
