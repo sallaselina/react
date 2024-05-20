@@ -2,6 +2,14 @@
   margin: 0 auto;
   text-align: center;
 }
+footer {
+  background-color: #733b36;
+  width: 100%;
+  padding: 0.5rem;
+  margin: auto;
+  position: fixed;
+  bottom: 0;
+}
 
 h1 {
   text-align: center;
@@ -11,9 +19,16 @@ h1 {
   color: #f2cbbd;
 }
 
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
 nav ul li {
   list-style-type: none;
-  display: inline;
+
+  flex-direction: row;
 }
 a {
   color: white;
@@ -26,6 +41,11 @@ a:hover {
   color: #f2cbbd;
 }
 
+input {
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 5px;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,16 +55,6 @@ a:hover {
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 1em;
-}
-
-.read-the-docs {
-  color: #888;
 }

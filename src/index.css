@@ -40,8 +40,9 @@ footer {
   width: 100%;
   padding: 0.5rem;
   margin: auto;
-  position: relative;
+  position: fixed;
   bottom: 0;
+  left: 0;
 }
 
 .container {
@@ -51,30 +52,47 @@ footer {
   grid-template-columns: auto auto auto auto auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  align-items: center;
+  align-content: space-evenly;
+  gap: 1rem;
+}
+
 .split {
-  display: inline;
   position: relative;
-  margin: 1rem;
-  width: 50%;
-  height: 80%;
+  justify-items: center;
+  align-items: center;
   background-position: center;
 }
 
 .split h2 {
   position: absolute;
-  bottom: 150px;
-  left: 185px;
-  transform: translate(-50%, -50%);
+  top: 175px;
+  left: 175px;
+}
+
+.split img {
+  border-radius: 10px;
+  width: 500px;
+  height: 500px;
+}
+
+.split img:hover {
+  opacity: 0.3;
 }
 
 .split a:hover {
-  color: #f2cbbd;
+  color: #385a68;
 }
 
 .card {
   background-color: #a65b4b;
   border-radius: 10px;
   min-width: 25%;
+  max-width: 250px;
 }
 
 .card h2 {
@@ -82,50 +100,53 @@ footer {
 }
 
 .card img {
-  max-height: 175px;
-  max-width: 175px;
+  max-height: 200px;
+  max-width: 200px;
   border-radius: 10px;
   justify-content: center;
   align-items: center;
 }
-
-.close {
-  display: flex;
+.material-symbols-outlined {
+  margin: 0.3rem;
+  padding: 0.3rem;
+  width: 1rem;
+  height: 1rem;
 }
-
+.close {
+  position: relative;
+}
 .heart {
   float: left;
 }
 
-.minus {
-  float: right;
-}
 .navigation a:hover {
   color: #f2cbbd;
 }
+
+.content {
+  margin: 3rem;
+  padding: 3rem;
+  background-color: #a65b4b;
+  border-radius: 10px;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+  padding: 0.8rem;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  margin: 1rem;
+  margin: 0.5rem;
+  background-color: #f9f9f9;
 }
 button:hover {
   border-color: #f2cbbd;
 }
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
 
 a:hover {
   color: #733b36;
-}
-button {
-  background-color: #f9f9f9;
 }

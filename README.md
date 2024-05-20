@@ -1,8 +1,29 @@
-# React + Vite
+# Animals application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application for React Basics course. The application features animals of different categories with likes, dislikes and a search bar.
 
-Currently, two official plugins are available:
+## Technologies used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Built with:
+
+- HTML
+- JS
+- CSS
+- Reactjs
+
+## Setup and usage
+
+Live page [here]
+
+## Screenshot
+
+## Sources
+
+- [Sources here]()
+
+## Authors and acknowledgment
+
+Salla Närhi
+
+- GitHub @sallaselina
+- [LinkedIn](https://www.linkedin.com/in/salla-narhi/)

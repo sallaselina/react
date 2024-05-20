@@ -10,15 +10,19 @@ const Card = ({ name, likes, addLike, removeCard, removeLike }) => {
         alt="image of the animal"
       />
       <h2>{name}</h2>
-      <h3>{likes} likes </h3>
-      <button onClick={addLike}>
-        <span className="material-symbols-outlined heart">
-          {likes >= 0 ? "heart_plus" : "heart_broken"}
+      <h3>
+        {likes} likes
+        <span className="material-symbols-outlined favorite">
+          {likes >= 0 ? "favorite" : "heart_broken"}
         </span>
+      </h3>
+      <button onClick={addLike}>
+        <span className="material-symbols-outlined heart_plus">heart_plus</span>
       </button>
       <button onClick={removeLike}>
         <span className="material-symbols-outlined minus">heart_minus</span>
       </button>
+      <br></br>
       <Link to={name}> See more</Link>
     </div>
   );

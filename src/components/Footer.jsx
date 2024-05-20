@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      <small>Copyright &copy; React24K</small>
+      <small>Copyright &copy; Salla Närhi React24K BC Helsinki</small>
     </footer>
   );
 };

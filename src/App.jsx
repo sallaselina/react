@@ -33,26 +33,6 @@ function App() {
     }));
   };
 
-  /* const removeCard = (item) => {
-    const updatedArray = zoo.filter((item) => item.name !== item);
-    setZoo(updatedArray);
-  };
-
-  const likesHandler = (item, action) => {
-    const updatedArray = animalsData.map((item) => {
-      if (item.name === animal) {
-        if (action === "add") {
-          return { ...item, likes: item.likes + 1 }; // opening the property with the spread operator, accessing the likes property and overwriting it with the incremented value
-        } else {
-          return { ...item, likes: item.likes - 1 };
-        }
-      } else {
-        return item;
-      }
-    });
-    setAnimalsData(updatedArray);
-  }; */
-
   const router = createBrowserRouter([
     { path: "/", element: <Home /> },
     {
