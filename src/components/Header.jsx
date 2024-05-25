@@ -1,4 +1,4 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -13,6 +13,12 @@ const Header = () => {
           </li>
           <li>
             <NavLink to="/persons">Persons</NavLink>
+          </li>
+          <li>
+            <NavLink to="/users">Users</NavLink>
+          </li>
+          <li>
+            <NavLink to="/posts">Posts</NavLink>
           </li>
           <li>
             <NavLink to="/about">About</NavLink>
